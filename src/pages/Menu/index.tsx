@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import Filters from "./Filters";
 import styles from "./Menu.module.scss";
+import Order from "./Order";
 import Search from "./Search";
 
 export default function Menu() {
@@ -22,6 +23,7 @@ export default function Menu() {
         <Search search={search} setSearch={setSearch} />
         <div className={styles.menu__filters}>
           <Filters filter={filter} setFilter={setFilter} />
+          <Order />
         </div>
       </section>
     </main>
