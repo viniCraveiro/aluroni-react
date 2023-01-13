@@ -50,4 +50,4 @@ npm install -D typescript-plugin-css-modules sass
 npm install normalize.css
 npm install react-icons
 npm install classnames
-
+npm i react-router-dom
