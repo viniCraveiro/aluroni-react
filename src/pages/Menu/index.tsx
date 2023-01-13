@@ -4,13 +4,13 @@ import { useState } from "react";
 import Filters from "./Filters";
 import Items from "./Items";
 import styles from "./Menu.module.scss";
-import Order from "./Order";
+import Order, { OptionsOrder } from "./Order";
 import Search from "./Search";
 
 export default function Menu() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<number | null>(null);
-  const [order, setOrder] = useState("");
+  const [order, setOrder] = useState<OptionsOrder>("");
 
   return (
     <main>
@@ -27,7 +27,7 @@ export default function Menu() {
           <Filters filter={filter} setFilter={setFilter} />
           <Order order={order} setOrder={setOrder} />
         </div>
-        <Items />
+        <Items search={search} filter={filter} order={order} />
       </section>
     </main>
   );
