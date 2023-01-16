@@ -1,5 +1,6 @@
 import menu from "data/menu.json";
 import theme from "styles/Theme.module.scss";
+import ourHome from "assets/nossa_casa.png";
 
 import styles from "./Home.module.scss";
 
@@ -21,6 +22,13 @@ export default function Home() {
             <button className={styles.recommend__button}>Ver mais</button>
           </div>
         ))}
+      </div>
+      <h3 className={theme.title}> Nossa Casa </h3>
+      <div className={styles.ourHome}>
+        <img src={ourHome} alt="Casa do aluroni" />
+        <div className={styles.ourHome__address}>
+          Avenida Paiçandu, 1234 <br /> <br /> Maringa - PR
+        </div>
       </div>
     </section>
   );
