@@ -3,12 +3,19 @@ import theme from "styles/Theme.module.scss";
 import ourHome from "assets/nossa_casa.png";
 
 import styles from "./Home.module.scss";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   let dishesRecommend = [...menu];
   dishesRecommend = dishesRecommend
     .sort(() => 0.5 - Math.random())
     .splice(0, 3);
+
+  const navigate = useNavigate();
+
+  function moreDetails(dish: typeof menu[0]) {
+    navigate(`/prato/${dish.id}`, { state: { ...dish } });
+  }
 
   return (
     <section>
@@ -19,7 +26,12 @@ export default function Home() {
             <div className={styles.recommend__image}>
               <img src={item.photo} alt={item.title} />
             </div>
-            <button className={styles.recommend__button}>Ver mais</button>
+            <button
+              className={styles.recommend__button}
+              onClick={() => moreDetails(item)}
+            >
+              Ver mais
+            </button>
           </div>
         ))}
       </div>
