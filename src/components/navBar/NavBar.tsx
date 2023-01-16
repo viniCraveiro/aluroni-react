@@ -1,5 +1,6 @@
 import styles from "./NavBar.module.scss";
 import { ReactComponent as Logo } from "assets/logo.svg";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const routes = [
@@ -22,7 +23,7 @@ export default function NavBar() {
       <ul className={styles.card__list}>
         {routes.map((route, index) => (
           <li key={index} className={styles.card__link}>
-            <a href={route.to}>{route.label}</a>
+            <Link to={route.to}>{route.label}</Link>
           </li>
         ))}
       </ul>
