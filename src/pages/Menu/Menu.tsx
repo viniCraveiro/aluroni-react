@@ -1,11 +1,11 @@
 import { ReactComponent as Logo } from "assets/logo.svg";
 import { useState } from "react";
 
-import Filters from "./Filters";
-import Items from "./Items";
+import Filters from "./Filters/Filters";
+import Items from "./Items/Items";
 import styles from "./Menu.module.scss";
-import Order, { OptionsOrder } from "./Order";
-import Search from "./Search";
+import Order, { OptionsOrder } from "./Order/Order";
+import Search from "./Search/Search";
 
 export default function Menu() {
   const [search, setSearch] = useState("");

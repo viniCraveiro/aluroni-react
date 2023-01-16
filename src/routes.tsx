@@ -1,5 +1,6 @@
-import Home from "pages/home";
-import Menu from "pages/Menu";
+import Home from "pages/home/Home";
+import Menu from "pages/Menu/Menu";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 export default function AppRouter() {
