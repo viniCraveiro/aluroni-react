@@ -1,5 +1,6 @@
 import Footer from "components/footer/Footer";
 import NavBar from "components/navBar/NavBar";
+import NotFound from "components/notFound/NotFound";
 import PageDefault from "components/pageDefault/PageDefault";
 import About from "pages/about/About";
 import Home from "pages/home/Home";
@@ -8,7 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 export default function AppRouter() {
   return (
-    <main>
+    <main className="container">
       <Router>
         <NavBar />
         <Routes>
@@ -17,8 +18,9 @@ export default function AppRouter() {
             <Route path="menu" element={<Menu />} />
             <Route path="about" element={<About />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </main>
   );
