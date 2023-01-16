@@ -1,4 +1,5 @@
 import menu from "data/menu.json";
+
 import styles from "./Home.module.scss";
 
 export default function Home() {
