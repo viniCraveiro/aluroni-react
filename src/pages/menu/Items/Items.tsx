@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Item from "./Item/Item";
 import menu from "data/menu.json";
 import styles from "./Items.module.scss";
+import { Menu } from "types/Dish";
 
 interface Props {
   search: string;
@@ -24,7 +25,7 @@ export default function Items(props: Props) {
     return true;
   }
 
-  function ordernade(newList: typeof menu) {
+  function ordernade(newList: Menu) {
     switch (order) {
     case "porcao":
       return newList.sort((a, b) => (a.size > b.size ? 1 : -1));

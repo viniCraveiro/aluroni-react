@@ -1,9 +1,10 @@
-import menu from "data/menu.json";
-import theme from "styles/Theme.module.scss";
 import ourHome from "assets/nossa_casa.png";
+import menu from "data/menu.json";
+import { useNavigate } from "react-router-dom";
+import theme from "styles/Theme.module.scss";
+import { Dish } from "types/Dish";
 
 import styles from "./Home.module.scss";
-import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   let dishesRecommend = [...menu];
@@ -13,8 +14,8 @@ export default function Home() {
 
   const navigate = useNavigate();
 
-  function moreDetails(dish: typeof menu[0]) {
-    navigate(`/prato/${dish.id}`, { state: { ...dish } });
+  function moreDetails(dish: Dish) {
+    navigate(`/prato/${dish.id}`, { state: { dish } });
   }
 
   return (
