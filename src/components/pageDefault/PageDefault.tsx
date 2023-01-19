@@ -2,7 +2,7 @@ import styles from "./PageDefault.module.scss";
 import { Outlet } from "react-router-dom";
 import theme from "styles/Theme.module.scss";
 
-export default function pageDefault() {
+export default function PageDefault() {
   return (
     <>
       <header className={styles.header}>
